@@ -1,0 +1,8 @@
+<launch>
+              <arg name="debug" default="false"/>
+	<include file="$(find gps_agent_pkg)/launch/baxter_gazebo_no_controller.launch" />
+	<include file="$(find gps_agent_pkg)/launch/baxter_gazebo_only_controller.launch">
+                  <arg name="winpdb" value="$(arg debug)"/>
+	</include>
+
+</launch>
